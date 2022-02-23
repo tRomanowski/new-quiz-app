@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Quiz-App</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="app.js" type="module"></script>
+  </head>
+  <body>
+    <section>
+      <form data-js="form" autocomplete="off">
+        <label for="question-input">Question:</label>
+        <textarea
+          required
+          name="question"
+          id="question-input"
+          placeholder="Why ...?"
+        ></textarea>
+
+        <label for="answer-input">Answer:</label>
+        <textarea
+          required
+          name="answer"
+          id="answer-input"
+          placeholder="Because ...!"
+        ></textarea>
+
+        <label for="tags-input">Tags:</label>
+        <input name="tags" id="tags-input" placeholder="html, css, more..." />
+
+        <button>Create Card</button>
+      </form>
+    </section>
+    <section>
+      <form data-js="filter-form" aria-labeledby="form-heading">
+        <fieldset>
+          <legend id="form-heading">Filter by tags:</legend>
+          <input
+            name="tag-filter"
+            value="all"
+            class="tag-input"
+            id="tag-all"
+            type="radio"
+            checked
+          />
+          <label class="tag-label" for="tag-all">all</label>
+          <input
+            name="tag-filter"
+            value="basic"
+            class="tag-input"
+            id="tag-basic"
+            type="radio"
+          />
+          <label class="tag-label" for="tag-basic">basic</label>
+          <input
+            name="tag-filter"
+            value="css"
+            class="tag-input"
+            id="tag-css"
+            type="radio"
+          />
+          <label class="tag-label" for="tag-css">css</label>
+          <input
+            name="tag-filter"
+            value="git"
+            class="tag-input"
+            id="tag-git"
+            type="radio"
+          />
+          <label class="tag-label" for="tag-git">git</label>
+          <input
+            name="tag-filter"
+            value="html"
+            class="tag-input"
+            id="tag-html"
+            type="radio"
+          />
+          <label class="tag-label" for="tag-html">html</label>
+          <input
+            name="tag-filter"
+            value="shell"
+            class="tag-input"
+            id="tag-shell"
+            type="radio"
+          />
+          <label class="tag-label" for="tag-shell">shell</label>
+        </fieldset>
+      </form>
+    </section>
+    <section><ul role="list" class="card-list" data-js="cards"></ul></section>
+  </body>
+</html>
